@@ -15,6 +15,10 @@ public class Cat
 
     // add a getAge() getter below for
     // obtaining the Cat's age
+    public int getAge()
+    {
+        return age;
+    }
 
 
 
@@ -22,7 +26,8 @@ public class Cat
     // returns one of three different messages
     // (make any messages you want!) rather than always returning "meow".
     // Each message should have equal chance of being returned.
-    public String speak() {
+    public String speak()
+    {
         return "meow!";
     }
 

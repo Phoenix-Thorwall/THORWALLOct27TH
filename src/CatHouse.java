@@ -4,7 +4,8 @@ public class CatHouse {
     private Cat cat2;
     private String owner;
 
-    public CatHouse(Cat cat1, Cat cat2, String owner) {
+    public CatHouse(Cat cat1, Cat cat2, String owner)
+    {
         this.cat1 = cat1;
         this.cat2 = cat2;
         this.owner = owner;
@@ -15,8 +16,21 @@ public class CatHouse {
     // introduce themselves alphabetically; if they have the same name AND
     // same age, then have cat1 go first
     public void rollCall() {
-        cat1.introduce();
-        cat2.introduce();
+        if (cat1.getAge() > cat2.getAge() || cat1.getName().compareTo(cat2.getName()) < 0)
+        {
+            cat1.introduce();
+            cat2.introduce();
+        }
+        else if (cat2.getAge() > cat1.getAge() || cat2.getName().compareTo(cat1.getName()) < 0)
+        {
+            cat2.introduce();
+            cat1.introduce();
+        }
+        else
+        {
+            cat1.introduce();
+            cat2.introduce();
+        }
     }
 
     // IMPLEMENT this method!
